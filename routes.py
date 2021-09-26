@@ -204,6 +204,7 @@ if submit_button:
 		col_9, col_10, col_11 = st.columns(3)
 
 		# Classic Approach Metrics
+		buffer_time = 5
 		col_9.markdown("#### Classic Approach:")
 		classic_distance = distance6+distance7+distance8
 		classic_duration = round((duration6+duration7+duration8),3)
@@ -212,16 +213,26 @@ if submit_button:
 		col_9.markdown(f"**To Destination 1**: {round(duration6,3)} minutes")
 		col_9.markdown(f"**To Destination 2**: {round(duration7,3)} minutes")
 		col_9.markdown(f"**To New Point**: {round(duration8,3)} minutes")
+		
 
 		# Optimized Approach Metrics
 		col_10.markdown("#### Optimized Approach:")
 		optimized_distance = distance2+distance3+distance4+distance5+distance9
 		optimized_duration = round((duration2+duration3+duration4+duration5+duration9),3)
+		acceptable_time = min(classic_duration,optimized_duration) + buffer_time
+		if classic_duration <= acceptable_time:
+			col_9.markdown(f"**Within Buffer?** Yes")
+		else:
+			col_9.markdown(f"**Within Buffer?** No")
 		col_10.markdown(f"**Distance**: {optimized_distance} meters")
 		col_10.markdown(f"**Duration**: {optimized_duration} minutes")
 		col_10.markdown(f"**To Destination 1**: {round((duration2+duration4),3)} minutes")
 		col_10.markdown(f"**To Destination 2**: {round((duration2+duration4+duration5),3)} minutes")
 		col_10.markdown(f"**To New Point**: {round((duration3+duration9),3)} minutes")
+		if optimized_duration <= acceptable_time:
+			col_10.markdown(f"**Within Buffer?** Yes")
+		else:
+			col_10.markdown(f"**Within Buffer?** No")
 
 		# Cost of meeting Metrics
 		col_11.markdown("#### Cost of Meeting:")
