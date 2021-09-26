@@ -209,6 +209,9 @@ if submit_button:
 		classic_duration = round((duration6+duration7+duration8),3)
 		col_9.markdown(f"**Distance**: {classic_distance} meters")
 		col_9.markdown(f"**Duration**: {classic_duration} minutes")
+		col_9.markdown(f"**To Destination 1**: {round(duration6,3)} minutes")
+		col_9.markdown(f"**To Destination 2**: {round(duration7,3)} minutes")
+		col_9.markdown(f"**To New Point**: {round(duration8,3)} minutes")
 
 		# Optimized Approach Metrics
 		col_10.markdown("#### Optimized Approach:")
@@ -216,6 +219,9 @@ if submit_button:
 		optimized_duration = round((duration2+duration3+duration4+duration5+duration9),3)
 		col_10.markdown(f"**Distance**: {optimized_distance} meters")
 		col_10.markdown(f"**Duration**: {optimized_duration} minutes")
+		col_10.markdown(f"**To Destination 1**: {round((duration2+duration4),3)} minutes")
+		col_10.markdown(f"**To Destination 2**: {round((duration2+duration4+duration5),3)} minutes")
+		col_10.markdown(f"**To New Point**: {round((duration3+duration9),3)} minutes")
 
 		# Cost of meeting Metrics
 		col_11.markdown("#### Cost of Meeting:")
