@@ -239,8 +239,12 @@ if submit_button:
 		col_11.markdown("#### Cost of Meeting:")
 		meet_distance = distance2 + distance3
 		meet_duration = round((duration1 + duration2),3)
-		col_11.markdown(f"**Meet Distance**: {meet_distance} meters")
-		col_11.markdown(f"**Meet Duration**: {meet_duration} minutes")
+		col_11.caption("From Driver 1")
+		col_11.markdown(f"**Meet Distance**: {distance2} meters")
+		col_11.markdown(f"**Meet Duration**: {duration2} minutes")
+		col_11.caption("From Driver 2")
+		col_11.markdown(f"**Meet Distance**: {distance3} meters")
+		col_11.markdown(f"**Meet Duration**: {duration3} minutes")
 
 		# Analysis
 		if optimized_distance < classic_distance:
