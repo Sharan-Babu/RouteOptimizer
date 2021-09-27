@@ -205,6 +205,7 @@ if submit_button:
 
 		# Classic Approach Metrics
 		buffer_time = 5
+		stock_refill_time = 2
 		col_9.markdown("#### Classic Approach:")
 		classic_distance = distance6+distance7+distance8
 		classic_duration = round((duration6+duration7+duration8),3)
@@ -212,7 +213,7 @@ if submit_button:
 		col_9.markdown(f"**Duration**: {classic_duration} minutes")
 		col_9.markdown(f"**To Destination 1**: {round(duration6,3)} minutes")
 		col_9.markdown(f"**To Destination 2**: {round(duration7,3)} minutes")
-		col_9.markdown(f"**To New Point**: {round(duration8,3)} minutes")
+		col_9.markdown(f"**To New Point**: {round(duration8+stock_refill_time,3)} minutes")
 		
 
 		# Optimized Approach Metrics
