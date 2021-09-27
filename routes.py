@@ -19,8 +19,8 @@ form = st.form('inputs')
 ## driver 1
 col_1, col_2 = form.columns(2)
 
-d1_lat = col_1.text_input("Driver 1 Latitude 🚴","39.94961")
-d1_long = col_2.text_input("Driver 1 Longitude 🚴","-75.15028")
+d1_lat = col_1.text_input("Driver 1 Latitude 🚴","39.94758")
+d1_long = col_2.text_input("Driver 1 Longitude 🚴","-75.15108")
 
 # driver 2
 col_3, col_4 = form.columns(2)
